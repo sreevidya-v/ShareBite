@@ -5,6 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShareBite | Serving Smiles 🍴</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Landing Page Enhancements ===== */
+    body.landing {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      color: #1b4332;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px 60px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #2e7d32;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+      color: #388e3c;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background-color: #66bb6a;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(102, 187, 106, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #43a047;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(67, 160, 71, 0.4);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #33691e;
+      text-align: center;
+    }
+
+    .btn.info {
+      background-color: #81c784;
+      color: #1b4332;
+    }
+
+    .btn.info:hover {
+      background-color: #66bb6a;
+      color: white;
+    }
+  </style>
 </head>
 <body class="landing">
 
@@ -15,11 +99,12 @@
     <div class="buttons">
       <a href="donor.html" class="btn donor">Login as Donor</a>
       <a href="receiver.html" class="btn receiver">Login as Receiver (NGO)</a>
+      <a href="awareness.html" class="btn info">What is ShareBite?</a>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 ShareBite | A step towards zero food waste 🌱</p>
+    <p>© 2025 <strong>ShareBite</strong> | A step towards zero food waste 🌱</p>
   </footer>
 
 </body>

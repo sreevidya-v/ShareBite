@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💚 ShareBite | Awareness & Impact</title>
+  <link rel="stylesheet" href="awareness.css" />
+</head>
+
+<body class="awareness-page">
+  <header>
+   
+    <h1>🥗 ShareBite Awareness</h1>
+    <p>Turning every leftover into a lifeline 💚</p>
+  </header>
+
+  <section class="intro fade-up">
+    <h2>Why Food Donation Matters 🍲</h2>
+    <p>
+      Hunger isn’t caused by a lack of food — it’s caused by food not reaching those who need it.<br>
+      Every time we waste a meal, we waste water, effort, and hope.<br>
+      Donating food turns excess into empathy and leftovers into love.
+    </p>
+  </section>
+
+  <div class="parallax">
+    <p>“Share what you have — because someone out there has nothing.”</p>
+  </div>
+
+  <section class="facts fade-up">
+    <h2>Did You Know? 📊</h2>
+    <ul class="facts-list">
+      <li>🌾 India wastes around <strong>67 million tonnes of food</strong> every year — enough to feed an entire state!</li>
+      <li>🥖 Nearly <strong>1 in 7 Indians</strong> go to bed hungry every night (FAO, 2024).</li>
+      <li>💧 1 plate of rice = <strong>500 litres of water</strong> used to grow it.</li>
+      <li>🌍 Globally, <strong>1/3 of food</strong> never gets eaten — that’s 1.3 billion tonnes wasted yearly.</li>
+      <li>🤝 Donating food reduces landfill waste and helps heal the planet.</li>
+    </ul>
+  </section>
+
+  <section class="action fade-up">
+    <h2>Be the Change 🌱</h2>
+    <p>
+      You don’t need much to make an impact — just compassion.<br>
+      Your single donation can fill plates, hearts, and lives.<br>
+      Through <strong>ShareBite</strong>, every act of kindness counts.
+    </p>
+    <div class="call-to-action">
+      <a href="donor.html" class="btn donate">🍴 Donate Food</a>
+      <a href="receiver.html" class="btn join">🌿 Join as NGO</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ShareBite | Feeding Hope, One Plate at a Time 💚</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const elements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

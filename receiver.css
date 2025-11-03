@@ -1,0 +1,72 @@
+body.receiver-page {
+  font-family: "Poppins", sans-serif;
+  background: #f5fff7;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #a9e6b5;
+  color: #004d2c;
+  border-bottom: 3px solid #7fd38c;
+}
+
+.donations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.donation-card {
+  background: #e6f8ea;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card h3 {
+  margin-top: 0;
+  color: #1a7a3f;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.card-buttons a,
+.card-buttons .disabled-btn {
+  background: #a9e6b5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #004d2c;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.card-buttons a:hover {
+  background: #88d69e;
+}
+
+footer {
+  text-align: center;
+  background: #a9e6b5;
+  padding: 1rem;
+  color: #004d2c;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}

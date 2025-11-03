@@ -1,0 +1,236 @@
+/* 🍃 Gentle Gradient Flow */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.awareness-page {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  color: #14532d;
+  overflow-x: hidden;
+}
+
+/* 🌱 Header */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: white;
+  padding: 90px 25px;
+  border-radius: 0 0 120px 120px;
+  box-shadow: 0 8px 25px rgba(56, 171, 47, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: glowPulse 2s infinite alternate;
+}
+
+header p {
+  font-size: 1.25em;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+  to { text-shadow: 0 0 30px rgba(255, 255, 255, 0.9); }
+}
+
+/* 🍃 Floating Leaves */
+.bg-leaf {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.25;
+  animation: leafDrift 12s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes leafDrift {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-30px) rotate(15deg); }
+  100% { transform: translateY(0) rotate(-15deg); }
+}
+
+/* 🌸 Sections */
+section {
+  width: 85%;
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
+  color: #1b5e20;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 45px;
+  padding: 50px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(86, 171, 47, 0.25);
+}
+
+section h2 {
+  font-size: 2.3em;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.9;
+  color: #33691e;
+}
+
+/* 📊 Facts */
+.facts-list {
+  margin: 40px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.facts-list li {
+  background: linear-gradient(90deg, #f4ffec, #e0f7d7);
+  border-left: 8px solid #8bc34a;
+  padding: 18px 22px;
+  margin: 15px 0;
+  border-radius: 25px;
+  font-size: 1.05em;
+  color: #2e7d32;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.facts-list li:hover {
+  background: #dbffcb;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(139,195,74,0.3);
+}
+
+/* 🌍 Quote Section */
+/* 🌍 Quote Section (improved for depth and balance) */
+/* 🌍 Compact Quote Section */
+.parallax {
+  position: relative;
+  background-image: url('assests/WhatsApp\ Image\ 2025-11-03\ at\ 18.22.42_e53f93a6.jpg'); /* optional image */
+  min-height: 180px; /* smaller height */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #ecf9f0; /* soft mint fallback */
+}
+
+/* 🍃 Floating leaves around the quote */
+.parallax::before, .parallax::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.35;
+  animation: leafFloat 10s infinite ease-in-out alternate;
+}
+.parallax::before {
+  top: 20px;
+  left: 60px;
+  animation-delay: 0s;
+}
+.parallax::after {
+  bottom: 20px;
+  right: 80px;
+  animation-delay: 2s;
+}
+
+@keyframes leafFloat {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(-10deg); }
+}
+
+/* ✨ Quote Text */
+.parallax p {
+  font-size: 1.1em; /* much smaller now */
+  font-weight: 600;
+  text-align: center;
+  padding: 0 25px;
+  color: #1b5e20; /* dark leaf green */
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.7), 
+               0 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  z-index: 2;
+  animation: quoteGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes quoteGlow {
+  from { text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); }
+  to { text-shadow: 0 3px 8px rgba(86, 171, 47, 0.3); }
+}
+
+/* Subtle breathing glow animation */
+@keyframes quoteGlow {
+  from { text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+  to { text-shadow: 0 4px 12px rgba(86, 171, 47, 0.4); }
+}
+
+/* ✨ Buttons */
+.call-to-action {
+  margin-top: 40px;
+}
+.btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 50px;
+  color: #1b5e20;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s ease;
+  margin: 10px;
+  background: linear-gradient(90deg, #a8e063, #56ab2f);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 30px rgba(86,171,47,0.35);
+}
+
+/* 🌿 Footer */
+footer {
+  text-align: center;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: #fffef5;
+  padding: 25px;
+  border-radius: 70px 70px 0 0;
+  font-size: 1em;
+  margin-top: 100px;
+  box-shadow: 0 -5px 25px rgba(56,171,47,0.3);
+}
+
+/* 🌼 Scroll Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

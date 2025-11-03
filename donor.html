@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShareBite | Donor Verification</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>ShareBite | Donor Portal</title>
+  <link rel="stylesheet" href="donor.css" />
 </head>
 <body class="donor-page">
 
@@ -13,38 +13,55 @@
     <p>Verify yourself and share the joy of food 💚</p>
   </header>
 
-  <div class="form-container">
+  <div class="container">
 
     <!-- Step 1: Verification -->
     <div id="verifySection">
       <h2>🔐 Donor Verification</h2>
+
       <label>👤 Name:</label>
-      <input type="text" id="donorName" placeholder="Enter your name" required />
+      <input type="text" id="donorName" placeholder="Enter your name" required>
 
       <label>📧 Email:</label>
-      <input type="email" id="donorEmail" placeholder="Enter your email" required />
+      <input type="email" id="donorEmail" placeholder="Enter your email" required>
 
-      <button id="verifyBtn" class="btn-submit">Verify Me</button>
+      <label>📞 Contact Number:</label>
+      <input type="tel" id="donorPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required>
+
+      <button id="verifyBtn" class="btn">Verify Me</button>
     </div>
 
-    <!-- Step 2: Food Form (Hidden until verification) -->
-    <form id="donationForm" style="display:none; margin-top:30px;">
+    <!-- Step 2: Action Buttons -->
+    <div id="actionSection" style="display:none;">
+      <h2>Welcome, <span id="donorDisplayName"></span> 👋</h2>
+      <p>Select what you’d like to do today:</p>
+      <div class="button-group">
+        <button id="donateBtn" class="btn-primary">🍱 Donate Food</button>
+        <button id="viewDonationsBtn" class="btn-secondary">📦 View My Donations</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Donation Form -->
+    <form id="donationForm" style="display:none;">
       <h2>🥘 Food Details</h2>
 
       <label>📍 Location:</label>
-      <input type="text" id="location" placeholder="City or Area" required />
+      <input type="text" id="location" placeholder="City or Area" required>
 
       <label>🏠 Address:</label>
-      <input type="text" id="address" placeholder="Full Address" required />
+      <input type="text" id="address" placeholder="Full Address" required>
 
       <label>🌐 Google Maps URL:</label>
-      <input type="url" id="mapUrl" placeholder="Paste location URL (optional)" />
+      <div class="map-input">
+        <input type="url" id="mapUrl" placeholder="Auto-filled or paste manually">
+        <button type="button" id="getLocationBtn" class="btn-small">📍 Use My Location</button>
+      </div>
 
       <label>⏰ Time Food Prepared:</label>
-      <input type="time" id="timePrepared" required />
+      <input type="time" id="timePrepared" required>
 
-      <label>🥗 Quantity (serves how many people):</label>
-      <input type="number" id="quantity" min="1" placeholder="e.g. 10" required />
+      <label>👥 Quantity (serves how many people):</label>
+      <input type="number" id="quantity" min="1" placeholder="e.g. 10" required>
 
       <label>🍛 Type of Food:</label>
       <select id="foodType" required>
@@ -55,17 +72,22 @@
       </select>
 
       <label>📸 Upload Food Image (optional):</label>
-      <input type="file" id="foodImage" accept="image/*" />
+      <input type="file" id="foodImage" accept="image/*">
 
-      <button type="submit" class="btn-submit">Submit Donation</button>
+      <div class="button-group">
+        <button type="submit" class="btn-primary">Submit Donation</button>
+        <button type="button" id="backBtn" class="btn-secondary">⬅ Back</button>
+      </div>
     </form>
-
   </div>
 
   <footer>
-    <a href="index.html" class="back-link">⬅ Back to Home</a>
+    <p>© 2025 ShareBite | Connecting Donors & NGOs with Care 💚</p>
   </footer>
 
-  <script src="script.js"></script>
+  
+  <!-- ✅ Use your existing script.js -->
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>

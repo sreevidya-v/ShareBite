@@ -326,3 +326,155 @@ body.receiver-page {
   color: #fff;
   transform: scale(1.05);
 }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-submit,
+.btn-back {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-back:hover {
+  background-color: #3e9144;
+  transform: scale(1.05);
+}
+.map-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-location {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn-location:hover {
+  background-color: #256b45;
+}
+
+/* Contact Page Styles */
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #f8fff4;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+  color: #2d572c;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-mail, .btn-call, .btn-back, .btn-map {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mail:hover, .btn-call:hover, .btn-map:hover {
+  background-color: #45a049;
+}
+
+.btn-back {
+  background-color: #555;
+}
+
+.btn-back:hover {
+  background-color: #333;
+}
+
+.donor-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.donor-actions button {
+  background-color: #86efac;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.donor-actions button:hover {
+  background-color: #4ade80;
+}
+
+.donations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 20px;
+}
+
+.donation-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.donation-card.unavailable {
+  opacity: 0.6;
+  background: #f0f0f0;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  background: #16a34a;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: #15803d;
+}
